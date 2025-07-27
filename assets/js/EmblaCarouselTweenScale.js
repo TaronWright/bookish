@@ -1,4 +1,4 @@
-const TWEEN_FACTOR_BASE = 0.52
+const TWEEN_FACTOR_BASE = 0.2
 let tweenFactor = 0
 let tweenNodes = []
 
