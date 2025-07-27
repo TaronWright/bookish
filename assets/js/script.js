@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 /**
  * add event on element
  */
@@ -75,3 +73,4 @@ const navigateTab = function () {
 }
 
 addEventOnelem(tabCard, "click", navigateTab);
+

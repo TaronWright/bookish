@@ -54,7 +54,7 @@
    * spacing
    */
 
-  --section-padding: 80px;
+  --section-padding: 20px;
 
   /**
    * shadow
@@ -96,12 +96,63 @@
   #RESET
 \*-----------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  line-height: 1.15;
+  background-color: var(--background-site);
+  font-size: 62.5%;
+  font-family: Inter, 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
+.theme-light {
+  --brand-primary: rgb(47, 112, 193);
+  --brand-secondary: rgb(116, 97, 195);
+  --brand-alternative: rgb(19, 120, 134);
+  --background-site: rgb(249, 249, 249);
+  --background-code: rgb(244, 244, 244);
+  --text-body: rgb(54, 49, 61);
+  --text-comment: rgb(99, 94, 105);
+  --text-high-contrast: rgb(49, 49, 49);
+  --text-medium-contrast: rgb(99, 94, 105);
+  --text-low-contrast: rgb(116, 109, 118);
+  --detail-high-contrast: rgb(192, 192, 192);
+  --detail-medium-contrast: rgb(234, 234, 234);
+  --detail-low-contrast: rgb(240, 240, 242);
+  --admonition-note: rgb(46, 109, 188);
+  --admonition-warning: rgb(255, 196, 9);
+  --admonition-danger: rgb(220, 38, 38);
+  --brand-primary-rgb-value: 47, 112, 193;
+  --brand-secondary-rgb-value: 116, 97, 195;
+  --brand-alternative-rgb-value: 19, 120, 134;
+  --background-site-rgb-value: 249, 249, 249;
+  --background-code-rgb-value: 244, 244, 244;
+  --text-body-rgb-value: 54, 49, 61;
+  --text-comment-rgb-value: 99, 94, 105;
+  --text-high-contrast-rgb-value: 49, 49, 49;
+  --text-medium-contrast-rgb-value: 99, 94, 105;
+  --text-low-contrast-rgb-value: 116, 109, 118;
+  --detail-high-contrast-rgb-value: 192, 192, 192;
+  --detail-medium-contrast-rgb-value: 234, 234, 234;
+  --detail-low-contrast-rgb-value: 240, 240, 242;
+  --admonition-note-rgb-value: 46, 109, 188;
+  --admonition-warning-rgb-value: 255, 196, 9;
+  --admonition-danger-rgb-value: 220, 38, 38;
+}
+
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 li { list-style: none; }
@@ -304,8 +355,6 @@ body {
 
 .header {
   background-color: var(--white);
-  position: absolute;
-  top: 10px;
   right: 10px;
   left: 10px;
   padding-block: 12px;
@@ -341,6 +390,7 @@ body {
   color: var(--charcoal);
   line-height: 1;
 }
+
 
 .nav-toggle-btn {
   font-size: 40px;
@@ -394,7 +444,7 @@ body {
 \*-----------------------------------*/
 
 .hero {
-  padding-block-start: calc(var(--section-padding) + 60px);
+  padding-block-start: calc(var(--section-padding) );
   text-align: center;
 }
 
@@ -497,13 +547,11 @@ body {
 
 .benefits-card:is(:hover, :focus-within)::after { transition-delay: 0.1s; }
 
-.benefits-card .card-icon {
-  background-color: var(--old-rose);
-  max-width: max-content;
-  padding: 10px;
-  box-shadow: var(--shadow-3);
-  transition: var(--transition-1);
-}
+.card-icon {
+display: flex;
+align-items: center;
+justify-content: center;  
+} 
 
 .benefits-card:is(:hover, :focus) .card-icon { box-shadow: none; }
 
@@ -511,6 +559,11 @@ body {
 
 .benefits-card .btn-link { margin-block-start: 15px; }
 
+.card-icon .book-cover {
+  width: 40%;
+  object-fit: cover;
+  border-radius: var(--radius-5);
+}
 
 
 
@@ -520,6 +573,9 @@ body {
 \*-----------------------------------*/
 
 .chapter-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   background-color: var(--white);
   padding: 25px;
@@ -631,6 +687,13 @@ body {
 .author .container {
   display: grid;
   gap: 40px;
+}
+
+.author-banner {
+  z-index: 1;
+  width: 100%;
+  justify-self: center;
+  align-self: center;
 }
 
 .author :is(.section-subtitle, .section-title) { text-align: left; }
@@ -796,6 +859,16 @@ textarea.input-field {
 
 .footer-bottom { padding-block: 20px; }
 
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
 
 
 
@@ -1061,6 +1134,7 @@ textarea.input-field {
     margin-block-end: 0;
     display: flex;
     gap: 30px;
+    
   }
 
 
@@ -1070,7 +1144,7 @@ textarea.input-field {
    */
 
   .benefits .grid-list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 
@@ -1203,6 +1277,7 @@ textarea.input-field {
    */
 
   .author-content { padding: 85px 60px 115px; }
+
 
 
 

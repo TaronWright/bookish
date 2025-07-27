@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class = "theme-light">
 
 <head>
   <meta charset="UTF-8">
@@ -23,6 +23,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/embla.css">
 
   <!-- 
     - google font link
@@ -47,10 +48,9 @@
   -->
 
   <header class="header" data-header>
-    <div class="container">
+    <div class="container" >
 
-      <a href="#" class="logo">Bookish</a>
-
+      <img src="./assets/images/signature.png" class="navbar-signature" alt="signature" style="height: 60px"/>
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
 
@@ -60,14 +60,6 @@
 
           <li class="navbar-item">
             <a href="#benefits" class="navbar-link" data-nav-link>Benefits</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#chapters" class="navbar-link" data-nav-link>Chapters</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#pricing" class="navbar-link" data-nav-link>Pricing</a>
           </li>
 
           <li class="navbar-item">
@@ -101,40 +93,40 @@
   <main>
     <article>
 
-      <!-- 
-        - #HERO
+            <!-- 
+        - #AUTHOR
       -->
 
-      <section class="section hero" id="home" aria-label="home">
+      <section class="section author" id="author">
         <div class="container">
 
-          <div class="hero-content">
+          <figure class ="author-banner" >
+            <img src="./assets/images/author-banner.png"  loading="lazy" alt="Sinead McCoole"
+              class="img-cover">
+          </figure>
 
-            <p class="section-subtitle">Let's Make The Best Investment</p>
+          <div class="author-content">
 
-            <h1 class="h1 hero-title">Read More And Make Success The Result Of Perfection.</h1>
+            <p class="section-subtitle">Author, Historian, Curator</p>
 
-            <p class="section-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad harum quibusdam, assumenda quia explicabo.
-            </p>
+            <h2 class="h2 section-title">Sinead McCoole</h2>
 
-          </div>
+            <p class="author-name">Style: Test</p>
 
-          <div class="hero-banner has-before">
-            <img src="./assets/images/hero-banner.png" width="431" height="596"
-              alt="things i never said, a novel by claudia wilson" class="w-100">
+            <div class="section-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ducimus enim fuga vero cumque possimus ipsum,
+              alias numquam
+              sint et, voluptates quisquam. Totam atque, fuga culpa corrupti eos reiciendis excepturi ad sint sequi
+              magnam, iste
+              voluptates eaque. In, omnis cumque rem modi atque, dolorem fuga illum dicta quidem atque dignissimos!
+              Ipsum sequi harum
+              commodi laborum, ducimus tempore debitis nesciunt quasi! Deleniti.
+            </div>
 
-            <button class="play-btn" aria-label="play video">
-              <ion-icon name="play-outline" aria-hidden="true"></ion-icon>
-            </button>
           </div>
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #BENEFITS
@@ -146,19 +138,19 @@
           <div class="grid-list">
 
             <li class="benefits-content">
-              <h2 class="h2 section-title">What you'll achieve by this book</h2>
+              <h2 class="h2 section-title">A collection of work</h2>
 
-              <p class="section-text">Lorem ipsum dolor sit amet, consectetuer laoreet dolore magna.</p>
+              <p class="section-text"><i>Take a trip down memory lane with this selection of works of women in Irish history.</i></p>
             </li>
 
             <li>
               <div class="benefits-card has-before has-after">
 
                 <div class="card-icon">
-                  <img src="./assets/images/benefits-1.svg" width="40" height="40" loading="lazy" alt="Experience">
+                  <img src="./assets/images/books/hazel.jpg" class="book-cover" loading="lazy" alt="Experience">
                 </div>
 
-                <h3 class="h3 card-title">Experience</h3>
+                <h3 class="h3 card-title">Book 1</h3>
 
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
@@ -178,10 +170,10 @@
               <div class="benefits-card has-before has-after">
 
                 <div class="card-icon">
-                  <img src="./assets/images/benefits-2.svg" width="40" height="40" loading="lazy" alt="Motivation">
+                   <img src="./assets/images/books/easter-widows.jpg" class="book-cover" loading="lazy" alt="Experience">
                 </div>
 
-                <h3 class="h3 card-title">Motivation</h3>
+                <h3 class="h3 card-title">Book 2</h3>
 
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
@@ -201,10 +193,10 @@
               <div class="benefits-card has-before has-after">
 
                 <div class="card-icon">
-                  <img src="./assets/images/benefits-3.svg" width="40" height="40" loading="lazy" alt="Goals">
+                   <img src="./assets/images/books/mna-1916.jpg" class="book-cover" loading="lazy" alt="Experience">
                 </div>
 
-                <h3 class="h3 card-title">Goals</h3>
+                <h3 class="h3 card-title">Book 3</h3>
 
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
@@ -224,10 +216,10 @@
               <div class="benefits-card has-before has-after">
 
                 <div class="card-icon">
-                  <img src="./assets/images/benefits-4.svg" width="40" height="40" loading="lazy" alt="Vision">
+                  <img src="./assets/images/books/no-ordinary-women.jpg" class="book-cover" loading="lazy" alt="Experience">
                 </div>
 
-                <h3 class="h3 card-title">Vision</h3>
+                <h3 class="h3 card-title">Book 4</h3>
 
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
@@ -247,10 +239,10 @@
               <div class="benefits-card has-before has-after">
 
                 <div class="card-icon">
-                  <img src="./assets/images/benefits-5.svg" width="40" height="40" loading="lazy" alt="Mission">
+                   <img src="./assets/images/books/passion-politics.jpg" class="book-cover" loading="lazy" alt="Experience">
                 </div>
 
-                <h3 class="h3 card-title">Mission</h3>
+                <h3 class="h3 card-title">Book 5</h3>
 
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
@@ -270,10 +262,10 @@
               <div class="benefits-card has-before has-after">
 
                 <div class="card-icon">
-                  <img src="./assets/images/benefits-6.svg" width="40" height="40" loading="lazy" alt="Strategy">
+                   <img src="./assets/images/books/researchers-handbook.jpg" class="book-cover" loading="lazy" alt="Experience">
                 </div>
 
-                <h3 class="h3 card-title">Strategy</h3>
+                <h3 class="h3 card-title">Book 6s</h3>
 
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ex? Voluptas minus quis
@@ -293,169 +285,6 @@
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #CHAPTERS
-      -->
-
-      <section class="section chapters" id="chapters">
-        <div class="container">
-
-          <p class="section-subtitle">Chapters</p>
-
-          <h2 class="h2 section-title has-underline">
-            Chapters we've covered
-            <span class="span has-before"></span>
-          </h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 01</p>
-
-                <h3 class="h3 card-title">Getting started</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 02</p>
-
-                <h3 class="h3 card-title">The language of gossip box</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 03</p>
-
-                <h3 class="h3 card-title">The rise of trend Design</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 04</p>
-
-                <h3 class="h3 card-title">The rise of trend Design</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 05</p>
-
-                <h3 class="h3 card-title">The rise of trend Design</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 06</p>
-
-                <h3 class="h3 card-title">The rise of trend Design</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 07</p>
-
-                <h3 class="h3 card-title">Literary Jatra</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 08</p>
-
-                <h3 class="h3 card-title">Non-technical literature</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Chapter 09</p>
-
-                <h3 class="h3 card-title">Where is the author?</h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, quod sit amet aspernatur minima
-                  deleniti.
-                </p>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
 
 
       <!-- 
@@ -524,167 +353,61 @@
         </div>
       </section>
 
+      <section>
+          <header>
+            <h1 class="header">Embla Carousel Scale Vanilla</h1>
+        </header>
 
-
-
-
-      <!-- 
-        - #PRICING
-      -->
-
-      <section class="section pricing" id="pricing" aria-label="pricing">
-        <div class="container">
-
-          <p class="section-subtitle">Pricing</p>
-
-          <h2 class="h2 section-title has-underline">
-            Pricing based on their version
-            <span class="span has-before"></span>
-          </h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="pricing-card">
-
-                <h3 class="h3 card-title">E-Book</h3>
-
-                <data class="price" value="5">$05</data>
-
-                <ul class="pricing-card-list">
-
-                  <li class="card-item">
-                    <p class="card-text">Complete Book</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">PDF and EPUB</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">Hardcover Book</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">Access to Downloads</p>
-                  </li>
-
-                </ul>
-
-                <button class="btn btn-secondary">BUY NOW</button>
-
+        <div class="embla">
+          <div class="embla__viewport">
+            <div class="embla__container">
+              <div class="embla__slide">
+                <div class="embla__slide__number"></div>
               </div>
-            </li>
-
-            <li>
-              <div class="pricing-card bundle">
-
-                <h3 class="h3 card-title">Bundle</h3>
-
-                <data class="price" value="15">$15</data>
-
-                <ul class="pricing-card-list">
-
-                  <li class="card-item">
-                    <p class="card-text">Complete Book</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">PDF and EPUB</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">Hardcover Book</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">Access to Downloads</p>
-                  </li>
-
-                </ul>
-
-                <button class="btn btn-primary">BUY NOW</button>
-
+              <div class="embla__slide">
+                <div class="embla__slide__number">2</div>
               </div>
-            </li>
-
-            <li>
-              <div class="pricing-card">
-
-                <h3 class="h3 card-title">Hardcover</h3>
-
-                <data class="price" value="10">$10</data>
-
-                <ul class="pricing-card-list">
-
-                  <li class="card-item">
-                    <p class="card-text">Complete Book</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">PDF and EPUB</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">Hardcover Book</p>
-                  </li>
-
-                  <li class="card-item">
-                    <p class="card-text">Access to Downloads</p>
-                  </li>
-
-                </ul>
-
-                <button class="btn btn-secondary">BUY NOW</button>
-
+              <div class="embla__slide">
+                <div class="embla__slide__number">3</div>
               </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #AUTHOR
-      -->
-
-      <section class="section author" id="author">
-        <div class="container">
-
-          <figure class="author-banner img-holder" style="--width: 700; --height: 720;">
-            <img src="./assets/images/author-banner.png" width="700" height="720" loading="lazy" alt="Martin Jenny"
-              class="img-cover">
-          </figure>
-
-          <div class="author-content">
-
-            <p class="section-subtitle">The Author</p>
-
-            <h2 class="h2 section-title">Martin Jenny</h2>
-
-            <p class="author-name">Style: Art, Fiction</p>
-
-            <div class="section-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ducimus enim fuga vero cumque possimus ipsum,
-              alias numquam
-              sint et, voluptates quisquam. Totam atque, fuga culpa corrupti eos reiciendis excepturi ad sint sequi
-              magnam, iste
-              voluptates eaque. In, omnis cumque rem modi atque, dolorem fuga illum dicta quidem atque dignissimos!
-              Ipsum sequi harum
-              commodi laborum, ducimus tempore debitis nesciunt quasi! Deleniti.
+              <div class="embla__slide">
+                <div class="embla__slide__number">4</div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__slide__number">5</div>
+              </div>
             </div>
-
           </div>
-
+          <div class="embla__controls">
+            <div class="embla__buttons">
+              <button
+                class="embla__button embla__button--prev"
+                type="button"
+                disabled=""
+              >
+                <svg class="embla__button__svg" viewBox="0 0 532 532">
+                  <path
+                    fill="currentColor"
+                    d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"
+                  ></path>
+                </svg></button
+              ><button
+                class="embla__button embla__button--next"
+                type="button"
+                disabled=""
+              >
+                <svg class="embla__button__svg" viewBox="0 0 532 532">
+                  <path
+                    fill="currentColor"
+                    d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="embla__dots"></div>
+          </div>
         </div>
       </section>
-
-
 
 
 
@@ -708,14 +431,12 @@
               <div class="achievement-card">
 
                 <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
-                  <img src="./assets/images/achievement-1.jpg" width="450" height="300" loading="lazy" alt="Nominated"
-                    class="img-cover">
+                  
                 </figure>
 
                 <div class="card-content">
 
-                  <img src="./assets/images/award.svg" width="80" height="80" loading="lazy" alt="trophy"
-                    class="abs-img">
+                  
 
                   <h3 class="h3 card-title">Nominated</h3>
 
@@ -732,14 +453,12 @@
               <div class="achievement-card">
 
                 <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
-                  <img src="./assets/images/achievement-2.jpg" width="450" height="300" loading="lazy" alt="Winner"
-                    class="img-cover">
+                  
                 </figure>
 
                 <div class="card-content">
 
-                  <img src="./assets/images/award.svg" width="80" height="80" loading="lazy" alt="trophy"
-                    class="abs-img">
+                  
 
                   <h3 class="h3 card-title">Winner</h3>
 
@@ -756,14 +475,12 @@
               <div class="achievement-card">
 
                 <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
-                  <img src="./assets/images/achievement-3.jpg" width="450" height="300" loading="lazy"
-                    alt="Guest of Honor" class="img-cover">
+                  
                 </figure>
 
                 <div class="card-content">
 
-                  <img src="./assets/images/award.svg" width="80" height="80" loading="lazy" alt="trophy"
-                    class="abs-img">
+                
 
                   <h3 class="h3 card-title">Guest of Honor</h3>
 
@@ -780,14 +497,12 @@
               <div class="achievement-card">
 
                 <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
-                  <img src="./assets/images/achievement-4.jpg" width="450" height="300" loading="lazy" alt="Finalist"
-                    class="img-cover">
+                  
                 </figure>
 
                 <div class="card-content">
 
-                  <img src="./assets/images/award.svg" width="80" height="80" loading="lazy" alt="trophy"
-                    class="abs-img">
+                  
 
                   <h3 class="h3 card-title">Finalist</h3>
 
@@ -804,14 +519,12 @@
               <div class="achievement-card">
 
                 <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
-                  <img src="./assets/images/achievement-5.jpg" width="450" height="300" loading="lazy" alt="Winner"
-                    class="img-cover">
+                  
                 </figure>
 
                 <div class="card-content">
 
-                  <img src="./assets/images/award.svg" width="80" height="80" loading="lazy" alt="trophy"
-                    class="abs-img">
+                  
 
                   <h3 class="h3 card-title">Winner</h3>
 
@@ -828,14 +541,12 @@
               <div class="achievement-card">
 
                 <figure class="card-banner img-holder" style="--width: 450; --height: 300;">
-                  <img src="./assets/images/achievement-1.jpg" width="450" height="300" loading="lazy" alt="Nominated"
-                    class="img-cover">
+                 
                 </figure>
 
                 <div class="card-content">
 
-                  <img src="./assets/images/award.svg" width="80" height="80" loading="lazy" alt="trophy"
-                    class="abs-img">
+                  
 
                   <h3 class="h3 card-title">Nominated</h3>
 
@@ -1013,7 +724,7 @@
 
       <div class="footer-bottom">
         <p class="copyright">
-          &copy; 2022 All right reserved. Made with ❤ by codewithsadee.
+          &copy; 2022 All right reserved. Made by Taron Wright.
         </p>
       </div>
 
@@ -1027,7 +738,11 @@
   <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js" defer></script>
+  <script type="module" src="assets/js/index.js" defer></script>
+
+
+
 
   <!-- 
     - ionicon link
