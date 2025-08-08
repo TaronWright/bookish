@@ -74,3 +74,28 @@ const navigateTab = function () {
 
 addEventOnelem(tabCard, "click", navigateTab);
 
+
+function animateSVGSignature() {
+  const svg = document.getElementById('signature-svg');
+  if (!svg) return;
+
+  const paths = [
+    svg.querySelector('#Sinead'),
+    svg.querySelector('#Mc'),
+    svg.querySelector('#Coole')
+  ];
+
+  let delay = 0;
+
+  paths.forEach((path, i) => {
+    if (!path) return;
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    path.style.animation = `draw-path 2s ease forwards`;
+    path.style.animationDelay = `${delay}s`;
+    delay += 2; // 2 seconds per path, adjust as needed
+  });
+}
+
+window.addEventListener('DOMContentLoaded', animateSVGSignature);
