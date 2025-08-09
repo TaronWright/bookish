@@ -1190,6 +1190,16 @@ textarea.input-field {
   }
 
 
+  /**
+   * Play
+   */
+  .play-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+
 
   /**
    * ACHIEVEMENT

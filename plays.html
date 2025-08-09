@@ -1,154 +1,213 @@
 <!DOCTYPE html>
-<html lang="en" class = "theme-light">
+<html lang="en" class="theme-light">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
-    - primary meta tags
-  -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sinead McCoole</title>
-  <meta name="title" content="Bookish - Read More And Make Success">
-  <meta name="description"
-    content="Read More And Make Success The Result Of Perfection. - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad harum quibusdam, assumenda quia explicabo.">
+  <meta name="title" content="Bookish - Read More And Make Success" />
+  <meta name="description" content="Read More And Make Success The Result Of Perfection." />
 
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/embla.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/embla.css" />
 
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- 
-    - preload image
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
 
+  <style>
+    .play-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .play-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 350px;
+      object-fit: contain;
+    }
+
+    .thumbs-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .arrow {
+      cursor: pointer;
+      font-size: 28px;
+      user-select: none;
+      padding: 5px 10px;
+      color: #888;
+      font-weight: 600;
+      transition: color 0.3s;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .arrow:hover {
+      color: #555;
+    }
+
+    .thumbs {
+      display: flex;
+      overflow: hidden;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    .thumbs img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+      flex-shrink: 0;
+    }
+
+    .thumbs img.selected {
+      border-color: #007BFF;
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- 
-    - #HEADER
-  -->
-
   <header class="header" data-header>
-    <div class="container" >
-
-      <img src="./assets/images/signature.png" class="navbar-signature" alt="signature" style="height: 60px"/>
+    <div class="container">
+      <img src="./assets/images/signature.png" class="navbar-signature" alt="signature" style="height: 60px" />
       <nav class="navbar" data-navbar>
         <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="/index.html" class="navbar-link" data-nav-link>Home</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#work" class="navbar-link" data-nav-link>Work</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#author" class="navbar-link" data-nav-link>Author</a>
-          </li>
-
-         <li class="navbar-item">
-            <a href="#plays" class="navbar-link" data-nav-link>Plays</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#achievements" class="navbar-link" data-nav-link>Achievements</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-          </li>
-
+          <li class="navbar-item"><a href="/index.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li class="navbar-item"><a href="#work" class="navbar-link" data-nav-link>Work</a></li>
+          <li class="navbar-item"><a href="#author" class="navbar-link" data-nav-link>Author</a></li>
+          <li class="navbar-item"><a href="#plays" class="navbar-link" data-nav-link>Plays</a></li>
+          <li class="navbar-item"><a href="#achievements" class="navbar-link" data-nav-link>Achievements</a></li>
+          <li class="navbar-item"><a href="#contact" class="navbar-link" data-nav-link>Contact</a></li>
+          <li class="navbar-item"><a href="\test.html" class="navbar-link" data-nav-link>Test</a></li>
         </ul>
       </nav>
 
       <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true" class="open"></ion-icon>
-
         <ion-icon name="close-outline" aria-hidden="true" class="close"></ion-icon>
       </button>
-
     </div>
   </header>
 
   <main>
-
     <article>
-        <h2>Plays</h2>
-        <p>Welcome to the plays section. Here you can find a collection of plays written by Sinead McCoole.</p>
+      <h2>Plays</h2>
+      <p>Welcome to the plays section. Here you can find a collection of plays written by Sinead McCoole.</p>
 
-        <section class="section author" id="author">
+      <section>
         <div class="container">
-            <h2>About the Author</h2>
-            <p>Sinead McCoole is a talented playwright known for her captivating storytelling and rich character development.</p>
-            <div class = "play-gallery">
+          <h2>About the Author</h2>
+          <p>Sinead McCoole is a talented playwright known for her captivating storytelling and rich character development.</p>
 
+          <div class="play-section">
+            <div class="play-gallery">
+              <img id="mainImage" class="main-image" src="https://picsum.photos/id/1018/600/350" alt="Main Image" />
+
+              <div class="thumbs-container">
+                <div id="leftArrow" class="arrow">&#8592;</div>
+                <div class="thumbs" id="thumbs"></div>
+                <div id="rightArrow" class="arrow">&#8594;</div>
+              </div>
             </div>
+          </div>
         </div>
-        </section>
+      </section>
     </article>
-
-    
-
   </main>
-    <!-- 
-    - #FOOTER
-  -->
 
   <footer class="footer">
     <div class="container">
-
       <div class="footer-top">
-
         <a href="#" class="logo">Sinead McCoole</a>
-
       </div>
-
       <div class="footer-bottom">
-        <p class="copyright">
-          &copy; 2022 All right reserved. Made by Taron Wright.
-        </p>
+        <p class="copyright">&copy; 2022 All right reserved. Made by Taron Wright.</p>
       </div>
-
     </div>
   </footer>
 
-
-
-    <!-- 
-    - custom js link
-  -->
   <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js" defer></script>
   <script type="module" src="assets/js/index.js" defer></script>
 
-
-
-
-  <!-- 
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script>
+    const images = [
+      "./assets/images/leaving_the_ladies/leaving_the_ladies_cover.jpg",
+      "./assets/images/leaving_the_ladies/leaving_the_ladies_group.jpg",
+      "./assets/images/leaving_the_ladies/leaving_the_ladies_poster.jpg",
+        "./assets/images/leaving_the_ladies/IMG_3871.jpg",
+        "./assets/images/leaving_the_ladies/IMG_3873.jpg",
+        "./assets/images/leaving_the_ladies/IMG_3877.jpg",
+        "./assets/images/leaving_the_ladies/IMG_3881.jpg",
+
+      // Add more images here if you want
+    ];
+
+    const thumbsContainer = document.getElementById('thumbs');
+    const mainImage = document.getElementById('mainImage');
+    const leftArrow = document.getElementById('leftArrow');
+    const rightArrow = document.getElementById('rightArrow');
+
+    let currentIndex = 0;
+    let startVisibleIndex = 0;
+    const visibleThumbsCount = 5;
+
+
+    function render() {
+      thumbsContainer.innerHTML = '';
+      for (let i = startVisibleIndex; i < Math.min(startVisibleIndex + visibleThumbsCount, images.length); i++) {
+        const thumb = document.createElement('img');
+        thumb.src = images[i];
+        thumb.alt = `Thumbnail ${i + 1}`;
+        thumb.classList.toggle('selected', i === currentIndex);
+        thumb.addEventListener('click', () => {
+          currentIndex = i;
+          mainImage.src = images[i];
+          render();
+        });
+        thumbsContainer.appendChild(thumb);
+      }
+
+      leftArrow.style.visibility = startVisibleIndex > 0 ? 'visible' : 'hidden';
+      rightArrow.style.visibility = startVisibleIndex + visibleThumbsCount < images.length ? 'visible' : 'hidden';
+    }
+
+    leftArrow.addEventListener('click', () => {
+      if (startVisibleIndex > 0) {
+        startVisibleIndex--;
+        render();
+      }
+    });
+
+    rightArrow.addEventListener('click', () => {
+      if (startVisibleIndex + visibleThumbsCount < images.length) {
+        startVisibleIndex++;
+        render();
+      }
+    });
+
+    // Initialize gallery
+    mainImage.src = images[currentIndex];
+    render();
+  </script>
 </body>
 
 </html>
