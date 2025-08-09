@@ -16,22 +16,31 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <link rel="preload" as="image" href="./assets/images/hero-banner.png" />
 
   <style>
-    .play-section {
+    .plays .container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .play-section {
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
 
     .play-gallery {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
+      min-width: 300px;
     }
+
 
     .main-image {
       width: 100%;
@@ -42,7 +51,17 @@
     .thumbs-container {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
+
+    .thumbs {
+      display: flex;
+      overflow: hidden;
+      gap: 10px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+
 
     .arrow {
       cursor: pointer;
@@ -59,12 +78,6 @@
       color: #555;
     }
 
-    .thumbs {
-      display: flex;
-      overflow: hidden;
-      gap: 10px;
-      flex-grow: 1;
-    }
 
     .thumbs img {
       width: 80px;
@@ -78,6 +91,24 @@
 
     .thumbs img.selected {
       border-color: #007BFF;
+    }
+
+    .play-card {
+      max-width: 500px;
+      /* Your desired max width */
+      width: 100%;
+      /* Full width of the container it occupies */
+      background-color: white;
+      border: 1px solid var(--color-border);
+      padding: 25px;
+      box-shadow: var(--shadow-2);
+      border-radius: var(--radius-5);
+      transition: var(--transition-2);
+    }
+
+    .play-publish {
+      font-style: italic;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -107,15 +138,12 @@
 
   <main>
     <article>
-      <h2>Plays</h2>
-      <p>Welcome to the plays section. Here you can find a collection of plays written by Sinead McCoole.</p>
 
-      <section>
+      <section class="section plays">
         <div class="container">
-          <h2>About the Author</h2>
-          <p>Sinead McCoole is a talented playwright known for her captivating storytelling and rich character development.</p>
 
           <div class="play-section">
+
             <div class="play-gallery">
               <img id="mainImage" class="main-image" src="https://picsum.photos/id/1018/600/350" alt="Main Image" />
 
@@ -125,11 +153,25 @@
                 <div id="rightArrow" class="arrow">&#8594;</div>
               </div>
             </div>
+
+            <div class="play-card">
+              <h3 class="h3 card-title">Leaving the Ladies</h3>
+              <p class="play-publish">published by Arlen House, 2019.</p>
+              <p class="card-text">
+                Leaving the Ladies is a play based on an actual event which took place on 11 December 1917. A meeting of
+                Irish women activists that took place in the bathroom beside the
+                Round Room in the Mansion House. Countess de Markievicz, Dr Kathleen Lynn and Mary Perolz were among
+                those gathered. This was no chance meeting of a group of ladies in the lavatory. Instead it was an
+                organised and minuted meeting of Women Delegates to the All Ireland Conference, attended by some of the
+                most important and influential women of the day working to make sure they were included in political
+                life. What happened there is imagined, but the play is based on documents and letters.
+              </p>
+            </div>
           </div>
-        </div>
       </section>
     </article>
   </main>
+
 
   <footer class="footer">
     <div class="container">
@@ -153,10 +195,10 @@
       "./assets/images/leaving_the_ladies/leaving_the_ladies_cover.jpg",
       "./assets/images/leaving_the_ladies/leaving_the_ladies_group.jpg",
       "./assets/images/leaving_the_ladies/leaving_the_ladies_poster.jpg",
-        "./assets/images/leaving_the_ladies/IMG_3871.jpg",
-        "./assets/images/leaving_the_ladies/IMG_3873.jpg",
-        "./assets/images/leaving_the_ladies/IMG_3877.jpg",
-        "./assets/images/leaving_the_ladies/IMG_3881.jpg",
+      "./assets/images/leaving_the_ladies/IMG_3871.jpg",
+      "./assets/images/leaving_the_ladies/IMG_3873.jpg",
+      "./assets/images/leaving_the_ladies/IMG_3877.jpg",
+      "./assets/images/leaving_the_ladies/IMG_3881.jpg",
 
       // Add more images here if you want
     ];
@@ -168,8 +210,17 @@
 
     let currentIndex = 0;
     let startVisibleIndex = 0;
-    const visibleThumbsCount = 5;
 
+    function getVisibleThumbsCount() {
+      let ImageCount = Math.floor(window.innerWidth / 125)
+      // Divide viewport by 100px per thumbnail, subtract space for arrows, minimum 1
+      if (ImageCount > 5) {
+        return 5;
+      }
+      return ImageCount;
+    }
+
+    let visibleThumbsCount = getVisibleThumbsCount();
 
     function render() {
       thumbsContainer.innerHTML = '';
@@ -204,9 +255,17 @@
       }
     });
 
-    // Initialize gallery
+    // Update when window resizes
+    window.addEventListener('resize', () => {
+      visibleThumbsCount = getVisibleThumbsCount();
+      console.log("Viewport width:", window.innerWidth, "Visible thumbs:", visibleThumbsCount);
+      render();
+    });
+
+    // Initialize
     mainImage.src = images[currentIndex];
     render();
+
   </script>
 </body>
 
