@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * add event on element
@@ -12,9 +12,7 @@ const addEventOnelem = function (elem, type, callback) {
   } else {
     elem.addEventListener(type, callback);
   }
-}
-
-
+};
 
 /**
  * toggle navbar
@@ -27,36 +25,18 @@ const navToggler = document.querySelector("[data-nav-toggler]");
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
   navToggler.classList.toggle("active");
-}
+};
 
-addEventOnelem(navToggler, 'click', toggleNavbar);
+addEventOnelem(navToggler, "click", toggleNavbar);
 
 const closeNavbar = function () {
   navbar.classList.remove("active");
   navToggler.classList.remove("active");
-}
+};
 
 addEventOnelem(navbarLinks, "click", closeNavbar);
 
-
-
-/**
- * header active on scroll down to 100px
- */
-
-const header = document.querySelector("[data-header]");
-
-const activeHeader = function () {
-  if (window.scrollY > 100) {
-    header.classList.add("active");
-  } else {
-    header.classList.remove("active");
-  }
-}
-
 addEventOnelem(window, "scroll", activeHeader);
-
-
 
 /**
  * filter tab
@@ -70,19 +50,18 @@ const navigateTab = function () {
   lastTabCard.classList.remove("active");
   this.classList.add("active");
   lastTabCard = this;
-}
+};
 
 addEventOnelem(tabCard, "click", navigateTab);
 
-
 function animateSVGSignature() {
-  const svg = document.getElementById('signature-svg');
+  const svg = document.getElementById("signature-svg");
   if (!svg) return;
 
   const paths = [
-    svg.querySelector('#Sinead'),
-    svg.querySelector('#Mc'),
-    svg.querySelector('#Coole')
+    svg.querySelector("#Sinead"),
+    svg.querySelector("#Mc"),
+    svg.querySelector("#Coole"),
   ];
 
   let delay = 0;
@@ -98,4 +77,4 @@ function animateSVGSignature() {
   });
 }
 
-window.addEventListener('DOMContentLoaded', animateSVGSignature);
+window.addEventListener("DOMContentLoaded", animateSVGSignature);
